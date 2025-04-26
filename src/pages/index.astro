@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/ui/Hero.astro';
+import Services from '../components/ui/Services.astro';
+import ContactForm from '../components/ui/ContactForm.astro';
+import Footer from '../components/ui/Footer.astro';
+
+const servicesList = [
+  { title: 'Website Design', description: 'Modern and responsive websites.' },
+  { title: 'SEO Optimization', description: 'Get your business found online.' },
+  { title: 'Maintenance', description: 'Keep your site updated and secure.' },
+  { title: 'E-commerce Solutions', description: 'Sell online with ease.' },
+  { title: 'Content Creation', description: 'Engaging content for your audience.' },
+];
+---
+
+<BaseLayout title="Welcome to Sancho!" description="Professional websites for small businesses.">
+  <Hero title="Crafted Websites for Local Businesses" subtitle="Built fast. Built right." />
+  <Services services={servicesList} />
+  <ContactForm />
+  <Footer />
+</BaseLayout>
